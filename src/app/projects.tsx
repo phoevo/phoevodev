@@ -16,7 +16,7 @@ const projects = [
 
   {
     title:"Mindwaves Blog",
-    desc: "Made for a client that wanted a simple, easy-to-use blog to communicate with her followers. Created an admin UI that gives them full control over colors and text.",
+    desc: "Made for a client that wanted a simple, easy-to-use blog to communicate with her followers. Developed login-dependant admin UI that gives them full control over colors and text.",
     img:["/mindwavesss.png", "/mindwavesss.png"],
     stack: ["Vite", "ReactJS", "Appwrite Cloud"],
     link:"https://ikigaivitality.vercel.app/"
@@ -39,7 +39,7 @@ function Projects() {
         <div className='mt-5 px-4 md:px-6'>
           <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 md:w-full items-stretch'>
         {projects.map((project) => (
-          <div key={project.title} className='border shadow-sm w-full rounded-lg bg-card flex flex-col h-full'>
+          <div key={project.title} className='border shadow-sm w-full rounded-lg bg-card flex flex-col h-auto'>
               <div className='relative w-full aspect-[16/8] scale-98'>
                 <Image
                   src={project.img?.[0]}
@@ -58,7 +58,14 @@ function Projects() {
               </div>
 
             <div className='p-6 space-y-2'>
-              <h2 className='text-xl font-semibold'>{project.title}</h2>
+              <div className='flex flex-row items-center gap-2'>
+                <h2 className='text-lg font-semibold'>{project.title}</h2>
+                <Button asChild className='gap-0 w-auto hover:gap-1' size={"sm"} variant={"link"}>
+                  <Link href={project.link} target='_blank' rel='noopener noreferrer'>
+                    View <ArrowUpRight />
+                  </Link>
+                </Button>
+              </div>
               <p className='text-sm text-muted-foreground'>{project.desc}</p>
             </div>
 
@@ -68,11 +75,7 @@ function Projects() {
                   <Badge key={tech} variant="secondary">{tech}</Badge>
                 ))}
               </div>
-              <Button asChild className='gap-1 w-1/3 rounded-lg' size={'sm'}>
-                <Link href={project.link} target='_blank' rel='noopener noreferrer'>
-                  View <ArrowUpRight />
-                </Link>
-              </Button>
+
             </div>
 
 
