@@ -8,7 +8,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 
 const projects = [
   { title: "Synomilo",
-    desc: "My largest practice project, which kept growing and eventually launched. While tutoring English online, I noticed a lack of conversation-based content that I wanted to use with my students. This project aims to solve that problem by providing my own content (with guidance), presented through a clean, paper-esque UI.",
+    desc: "My largest practice project, which kept growing and eventually launched. While tutoring English online, I noticed a lack of conversation based content that I wanted to use with my students. This project aims to solve that problem by providing ready-to-use material (with guidance), presented through a clean, paper-esque UI.",
     img: ["/synomiloss.png", "/synomiloss-dark.png"],
     stack: ["Next.js", "Typescript", "shadcn", "Appwrite Cloud"],
     link: "https://www.synomilo.com"
@@ -16,7 +16,7 @@ const projects = [
 
   {
     title:"Mindwaves Blog",
-    desc: "Made for a client that wanted a simple, easy-to-use blog to communicate with her followers. Developed login-dependant admin UI that gives them full control over colors and text.",
+    desc: "Made for a client that wanted a simple blog to communicate with their followers. I also developed admin UI that gives them full control over posts, colors and texts.",
     img:["/mindwavesss.png", "/mindwavesss.png"],
     stack: ["Vite", "ReactJS", "Appwrite Cloud"],
     link:"https://ikigaivitality.vercel.app/"
@@ -40,7 +40,7 @@ function Projects() {
           <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 md:w-full items-stretch'>
         {projects.map((project) => (
           <div key={project.title} className='border shadow-sm w-full rounded-lg bg-card flex flex-col h-auto'>
-              <div className='relative w-full aspect-[16/8] scale-98'>
+              <div className='relative w-full aspect-[16/8] scale-100'>
                 <Image
                   src={project.img?.[0]}
                   alt='Screenshot'
@@ -58,9 +58,9 @@ function Projects() {
               </div>
 
             <div className='p-6 space-y-2'>
-              <div className='flex flex-row items-center gap-2'>
-                <h2 className='text-lg font-semibold'>{project.title}</h2>
-                <Button asChild className='gap-0 w-auto hover:gap-1' size={"sm"} variant={"link"}>
+              <div className='flex flex-row items-center space-x-4'>
+                <h2 className='text-lg font-medium'>{project.title}</h2>
+                <Button asChild className='gap-0 w-auto hover:gap-1' size={"xs"} variant={"default"}>
                   <Link href={project.link} target='_blank' rel='noopener noreferrer'>
                     View <ArrowUpRight />
                   </Link>

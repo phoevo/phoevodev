@@ -48,7 +48,7 @@ export default function Home() {
 
       </div>
 
-      <div className="flex flex-row w-full md:w-2/3 lg:w-4xl px-5 md:px-10 gap-4 justify-between items-center md:border-x">
+      <div className="flex flex-row w-full md:w-2/3 lg:w-4xl  px-5 md:px-10 gap-4 justify-between items-center md:border-x">
 
 
         <div className="flex flex-row items-center gap-4">
