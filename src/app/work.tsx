@@ -1,12 +1,12 @@
 import { Badge } from '@/components/ui/badge'
 import React from 'react'
-
+import { motion } from "motion/react"
 
 const work = [
    {
     company:"Synomilo",
     role: "Owner",
-    date: "Nov 6th 2025 - Present",
+    date: "November 6th, 2025 - Present",
     details:[
       "Create responsive, user-friendly interfaces to intuitively display information using React and shadcn/ui",
       "Re-design shadcn/ui components to better fit Synomilo's design language and use cases.",
@@ -40,8 +40,14 @@ const work = [
 function Work() {
   return (
     <div className='flex flex-col items-start mt-5 space-y-6'>
-      {work.map((job) =>
-        <div key={job.company} className='flex flex-col w-full gap-2 rounded-md px-6 py-4 border'>
+      {work.map((job, index) =>
+        <motion.div
+        key={job.company}
+        className='flex flex-col w-full gap-2 rounded-md px-6 py-4 border'
+        initial={{opacity: 0}}
+        animate={{ opacity: 1,}}
+        transition={{ duration: 0.4, delay: index * 0.080}}>
+
 
           <div className='flex flex-row justify-between items-start'>
             <div className='border-l px-3 ml-2'>
@@ -55,7 +61,7 @@ function Work() {
             {job.details.map((detail, index) =>
               <li key={index}>{detail}</li>)}
           </ul>
-        </div>
+        </motion.div>
         )}
 
     </div>

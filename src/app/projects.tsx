@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import {motion} from "motion/react"
 
 const projects = [
   { title: "Synomilo",
@@ -38,8 +39,13 @@ function Projects() {
       <ScrollArea className='h-[70vh]'>
         <div className='mt-5 px-4 md:px-6'>
           <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 md:w-full items-stretch'>
-        {projects.map((project) => (
-          <div key={project.title} className='border shadow-sm w-full rounded-lg bg-card flex flex-col h-auto'>
+        {projects.map((project, index) => (
+          <motion.div
+          key={project.title}
+          className='border shadow-sm w-full rounded-lg bg-card flex flex-col h-auto'
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{duration: 0.4, delay: index * 0.080}}>
               <div className='relative w-full aspect-[16/8] scale-100'>
                 <Image
                   src={project.img?.[0]}
@@ -79,7 +85,7 @@ function Projects() {
             </div>
 
 
-          </div>
+          </motion.div>
         ))}
         </div>
         </div>
