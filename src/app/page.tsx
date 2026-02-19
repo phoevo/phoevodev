@@ -14,6 +14,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { ExternalLink } from "lucide-react";
+import { link } from "fs";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -52,7 +53,7 @@ export default function Home() {
 
 
         <div className="flex flex-row items-center gap-4">
-           <Avatar className="h-20 w-20 md:h-40 md:w-40">
+           <Avatar className="h-20 w-20 md:h-30 md:w-30 lg:h-40 lg:w-40">
             <AvatarImage className="" src="https://github.com/phoevo.png" alt="PM" ></AvatarImage>
           </Avatar>
           <div className="flex flex-col">
@@ -61,12 +62,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col lg:gap-2">
 
           <Tooltip open={open} onOpenChange={setOpen}>
               <TooltipTrigger asChild>
                 <div
-
                   onClick={handleCopy}
                   className="cursor-pointer text-base"
                   >
@@ -74,8 +74,8 @@ export default function Home() {
                 </div>
               </TooltipTrigger>
 
-            <TooltipContent>
-            <p>{copied ? "Copied" : "Click to copy"}</p>
+            <TooltipContent side="right">
+            <p>{copied ? "Copied" : "Copy"}</p>
           </TooltipContent>
           </Tooltip>
 
@@ -84,12 +84,26 @@ export default function Home() {
           <Tooltip>
             <TooltipTrigger>
               <a href="https://www.linkedin.com/in/phoevos-maniski-73392b25b/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="">
               LinkedIn
             </a>
             </TooltipTrigger>
-            <TooltipContent>
+            <TooltipContent side="right">
               <ExternalLink size={15}/>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger>
+              <a href="/resume.pdf"
+              download="Maniski Resume">
+              Resume
+            </a>
+            </TooltipTrigger>
+            <TooltipContent side="right">
+              Download
             </TooltipContent>
           </Tooltip>
 

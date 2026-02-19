@@ -24,11 +24,11 @@ const projects = [
   },
 
    {
-    title:"Mindwaves Blog2",
-    desc: "Made for a client that wanted a simple, easy-to-use blog to communicate with her followers. Created an admin UI that gives them full control over colors and text.",
-    img:["/mindwavesss.png", "/mindwavesss.png"],
-    stack: ["Vite", "ReactJS", "Appwrite Cloud"],
-    link:"https://ikigaivitality.vercel.app/"
+    title:"Agenda Manager Project",
+    desc: "An older practice project using JavaScript, HTML and CSS. I focused on a clean design with soft animations.",
+    img:["/agendass.png", "/agendass.png"],
+    stack: ["JavaScript", "HTML", "CSS"],
+    link:"https://phoevo.github.io/to-do/"
   }
 ]
 
@@ -37,8 +37,8 @@ function Projects() {
   return (
     <div className=''>
       <ScrollArea className='h-[70vh]'>
-        <div className='mt-5 px-4 md:px-6'>
-          <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 md:w-full items-stretch'>
+        <div className='mt-5'>
+          <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 md:w-full items-stretch'>
         {projects.map((project, index) => (
           <motion.div
           key={project.title}

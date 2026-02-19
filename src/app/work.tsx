@@ -39,7 +39,7 @@ const work = [
 
 function Work() {
   return (
-    <div className='flex flex-col items-start mt-5 space-y-6'>
+    <div className='flex flex-col items-start mt-5 space-y-4'>
       {work.map((job, index) =>
         <motion.div
         key={job.company}
