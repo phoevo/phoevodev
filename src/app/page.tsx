@@ -49,7 +49,7 @@ export default function Home() {
 
       </div>
 
-      <div className="flex flex-row w-full md:w-2/3 lg:w-4xl  px-5 md:px-10 gap-4 justify-between items-center md:border-x">
+      <div className="flex flex-row w-full md:w-2/3 lg:w-4xl md:px-10 gap-4 justify-between items-center md:border-x">
 
 
         <div className="flex flex-row items-center gap-4">
@@ -62,13 +62,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:gap-2">
+        <div className="flex flex-col lg:gap-2 pr-10 md:p-0">
 
           <Tooltip open={open} onOpenChange={setOpen}>
               <TooltipTrigger asChild>
                 <div
                   onClick={handleCopy}
-                  className="cursor-pointer text-base"
+                  className="cursor-pointer text-sm md:text-base"
                   >
                   phoevo@gmail.com
                 </div>
@@ -86,7 +86,7 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/phoevos-maniski-73392b25b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="">
+              className="text-sm md:text-base">
               LinkedIn
             </a>
             </TooltipTrigger>
@@ -98,7 +98,8 @@ export default function Home() {
           <Tooltip>
             <TooltipTrigger>
               <a href="/resume.pdf"
-              download="Maniski Resume">
+              download="Maniski Resume"
+              className="text-sm md:text-base">
               Resume
             </a>
             </TooltipTrigger>
@@ -113,7 +114,7 @@ export default function Home() {
 
       </div>
 
-      <div className="flex justify-start w-md md:w-lg lg:w-4xl gap-1">
+      <div className="flex justify-start w-sm md:w-lg lg:w-4xl gap-1">
         <TabsPage/>
       </div>
 

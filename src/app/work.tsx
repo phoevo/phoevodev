@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 const work = [
    {
     company:"Synomilo",
-    role: "Owner",
+    role: "Freelance",
     date: "November 6th, 2025 - Present",
     details:[
       "Create responsive, user-friendly interfaces to intuitively display information using React and shadcn/ui",
