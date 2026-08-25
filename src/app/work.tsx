@@ -1,6 +1,6 @@
-import { Badge } from '@/components/ui/badge'
 import React from 'react'
 import { motion } from "motion/react"
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 const work = [
    {
@@ -10,19 +10,24 @@ const work = [
     details:[
       "Create responsive, user-friendly interfaces to intuitively display information using React and shadcn/ui",
       "Re-design shadcn/ui components to better fit Synomilo's design language and use cases.",
-      "Integrate global state management Zustand for to avoid re-renders, prop drilling and overall performance.",
+      "Integrate global state management Zustand to avoid re-renders, prop drilling and overall performance.",
       "Work closely with retired University Head of English to ensure quality in learning material."
     ]
   },
   {
-    company:"Teleperformance - Daimler Truck UK",
-    role: "Breakdown dispatcher",
-    date: "June 17, 2025 - Present",
-    details:[
-      "Dispatch roadside assistance technicians to breakdown locations after creating cases with customers.",
-      "Discuss vehicle issues with technicians, and propose the best solutions for the customer."
-    ]
-  },
+  company: "Teleperformance - Daimler Truck UK",
+  role: "Breakdown Dispatcher",
+  date: "June 17, 2025 - June 30, 2026",
+  details: [
+    "Took breakdown calls from customers and created cases based on their vehicle problems.",
+    "Arranged roadside assistance and dispatched technicians to customers who needed help.",
+    "Spoke with technicians about vehicle issues and helped decide the best solution for the customer.",
+    "Kept customers and technicians updated throughout the breakdown process.",
+    "Managed multiple cases at once while making sure urgent breakdowns were dealt with quickly.",
+    "Recorded customer, vehicle and technician information accurately on each case."
+  ]
+
+},
 
   {
     company:"Hellenic Armed Forces",
@@ -39,6 +44,7 @@ const work = [
 
 function Work() {
   return (
+    <ScrollArea className='h-[70vh]'>
     <div className='flex flex-col items-start mt-5 space-y-4'>
       {work.map((job, index) =>
         <motion.div
@@ -65,6 +71,7 @@ function Work() {
         )}
 
     </div>
+    </ScrollArea>
   )
 }
 
