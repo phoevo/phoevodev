@@ -9,10 +9,18 @@ import {motion} from "motion/react"
 
 const projects = [
   { title: "Synomilo",
-    desc: "My largest practice project, which kept growing and eventually launched. While tutoring English online, I noticed a lack of conversation based content that I wanted to use with my students. This project aims to solve that problem by providing ready-to-use material (with guidance), presented through a clean, paper-esque UI.",
+    desc: "My largest practice project, which continued to grow and eventually launched. While tutoring English online, I noticed a lack of conversation-based materials that I wanted to use with my students. This project aims to fill that gap by providing ready-to-use teaching materials, complete with guidance, all presented through a clean, paper-inspired UI.",
     img: ["/synomiloss.png", "/synomiloss-dark.png"],
-    stack: ["Next.js", "Typescript", "shadcn", "Appwrite Cloud"],
+    stack: ["Next.js", "Typescript", "shadcn", "GASP animation library", "Appwrite Cloud"],
     link: "https://www.synomilo.com"
+  },
+
+  {
+    title:"Syndeo",
+    desc: "A web app that helps English academies organize students, classes and teachers, replacing spreadsheets with a single shared dashboard.",
+    img:["/syndeoss.png", "/syndeoss-dark.png"],
+    stack: ["Next.js", "shadcn", "Appwrite Cloud"],
+    link:"https://syndeoedu.com/"
   },
 
   {

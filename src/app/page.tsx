@@ -98,13 +98,14 @@ export default function Home() {
           <Tooltip>
             <TooltipTrigger>
               <a href="/resume.pdf"
-              download="Maniski Resume"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm md:text-base">
               Resume
             </a>
             </TooltipTrigger>
             <TooltipContent side="right">
-              Download
+              <ExternalLink size={15}/>
             </TooltipContent>
           </Tooltip>
 
